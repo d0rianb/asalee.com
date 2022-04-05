@@ -15,9 +15,16 @@ html {
     overflow-x: hidden;
 }
 
-.icon {
-    height: 2rem;
-    aspect-ratio: 1/1;
+body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh
+}
+
+h2,
+h5 {
+    font-weight: normal;
+    margin: 0;
 }
 
 .icon-container {
@@ -29,6 +36,11 @@ html {
     margin: .5em;
     transition: background-color 250ms ease;
 
+    .icon {
+        height: 2rem;
+        aspect-ratio: 1/1;
+    }
+
     &:hover {
         background-color: #eeeeee;
     }
@@ -38,7 +50,12 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.asalee {
+    color: #42B23B;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 header {
@@ -218,5 +235,87 @@ header {
             }
         }
 
+    }
+}
+
+
+main {
+    flex-grow: 1;
+    margin: 1em;
+
+    section {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+
+        @include desktop {
+            flex-flow: row;
+        }
+    }
+
+    .stats {
+        &-title {
+            padding: .5em 0;
+            font-size: 1.5rem;
+        }
+
+        &-block {
+            @include center;
+            display: flex;
+            flex-flow: row nowrap;
+            min-width: 80%;
+            font-size: 1.75em;
+
+            .icon-container {
+                margin: 0;
+            }
+
+            .icon {
+                height: 3em;
+            }
+        }
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    border-radius: 2em 2em 0 0;
+    overflow: hidden;
+
+    @include desktop {
+        border-radius: .75em .75em 0 0;
+
+        img {
+            display: none;
+        }
+    }
+
+
+    p {
+        display: block;
+        width: 100vw;
+        color: #F4F4F4;
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+        background-color: #C6E094;
+
+        @include desktop {
+            background-color: #ababab;
+        }
+
+        .legals {
+            text-decoration: none;
+            color: #F4F4F4;
+            transition: all 250ms ease;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: underline;
+            }
+        }
     }
 }
