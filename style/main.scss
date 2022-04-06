@@ -241,7 +241,7 @@ header {
 
 main {
     flex-grow: 1;
-    margin: 1em;
+    padding: 1em;
 
     section {
         display: flex;
@@ -254,17 +254,32 @@ main {
     }
 
     .stats {
+        display: flex;
+        flex-flow: column nowrap;
+
+        &-container {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+
+            @include desktop {
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+
         &-title {
             padding: .5em 0;
             font-size: 1.5rem;
         }
 
         &-block {
-            @include center;
             display: flex;
+            align-items: center;
             flex-flow: row nowrap;
-            min-width: 80%;
             font-size: 1.75em;
+            margin: 0 1em;
 
             .icon-container {
                 margin: 0;
@@ -272,7 +287,37 @@ main {
 
             .icon {
                 height: 3em;
+
+                @include desktop {
+                    height: 2em;
+                }
             }
+        }
+
+        .left {
+            align-self: flex-start;
+        }
+
+        .right {
+            align-self: flex-end;
+        }
+
+        .presentation-text {
+            letter-spacing: 0.02em;
+            text-indent: 2em;
+            text-align: justify;
+            line-height: 1.25em;
+            color: #5F5F5F;
+        }
+    }
+
+    .image-separator {
+        img {
+            position: relative;
+            left: -1em;
+            box-sizing: content-box;
+            width: 100vw;
+            filter: brightness(.8);
         }
     }
 
