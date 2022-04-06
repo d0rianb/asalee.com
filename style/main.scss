@@ -22,6 +22,7 @@ body {
 }
 
 h2,
+h4,
 h5 {
     font-weight: normal;
     margin: 0;
@@ -49,6 +50,7 @@ h5 {
 .center {
     display: flex;
     justify-content: center;
+    align-self: center;
     align-items: center;
 }
 
@@ -131,7 +133,7 @@ header {
         }
 
         &.close {
-            right: -75vw;
+            right: -77vw;
         }
 
         &-item {
@@ -248,16 +250,13 @@ main {
         flex-flow: column wrap;
         width: 100%;
 
-        @include desktop {
-            flex-flow: row;
+        .title {
+            padding: .5em 0;
+            font-size: 1.75rem;
+            align-self: flex-start;
         }
-    }
 
-    .stats {
-        display: flex;
-        flex-flow: column nowrap;
-
-        &-container {
+        .container {
             display: flex;
             flex-flow: column;
             width: 100%;
@@ -268,18 +267,30 @@ main {
                 width: 100%;
             }
         }
+    }
 
-        &-title {
-            padding: .5em 0;
-            font-size: 1.5rem;
+    .stats {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .title {
+            @include center;
+            display: inline;
+            align-self: center;
+            font-size: 1.65rem;
+            white-space: nowrap;
         }
 
         &-block {
             display: flex;
             align-items: center;
             flex-flow: row nowrap;
-            font-size: 1.75em;
-            margin: 0 1em;
+            font-size: 1.7em;
+            white-space: nowrap;
+
+            @include desktop {
+                margin: 0 1em;
+            }
 
             .icon-container {
                 margin: 0;
@@ -307,17 +318,69 @@ main {
             text-indent: 2em;
             text-align: justify;
             line-height: 1.25em;
+            padding: 1em 0;
             color: #5F5F5F;
         }
     }
 
-    .image-separator {
-        img {
-            position: relative;
-            left: -1em;
-            box-sizing: content-box;
-            width: 100vw;
-            filter: brightness(.8);
+    .image-separator img {
+        position: relative;
+        left: -1em;
+        width: 100vw;
+        margin: 1em 0;
+        box-sizing: content-box;
+        filter: brightness(.8);
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .activities {
+        padding: .5em;
+
+        .diagram {
+            padding: 0.5em;
+        }
+
+        .bullet-point {
+            margin: 1em 0;
+
+            ul {
+                padding: 0;
+                margin: .5em;
+                margin-left: 1.5em;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+            }
+
+            li {
+                padding: 0.5em;
+                line-height: 1.25em;
+                text-align: justify;
+
+                @include desktop {
+                    padding: 0.65em;
+                }
+            }
+        }
+
+        .accent {
+            color: #42B23B;
+        }
+
+        .yt-video {
+            width: 100%;
+            aspect-ratio: 606/360;
+            margin: 1em 0;
+            border-radius: 1em;
+
+            @include desktop {
+                height: 350px;
+                width: auto;
+                border-radius: .5em;
+            }
         }
     }
 

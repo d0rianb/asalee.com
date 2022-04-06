@@ -21,6 +21,7 @@ body {
 }
 
 h2,
+h4,
 h5 {
   font-weight: normal;
   margin: 0;
@@ -46,6 +47,7 @@ h5 {
 .center {
   display: flex;
   justify-content: center;
+  align-self: center;
   align-items: center;
 }
 
@@ -125,7 +127,7 @@ header .menu.open {
   right: 0;
 }
 header .menu.close {
-  right: -75vw;
+  right: -77vw;
 }
 header .menu-item {
   display: flex;
@@ -233,37 +235,47 @@ main section {
   flex-flow: column wrap;
   width: 100%;
 }
+main section .title {
+  padding: 0.5em 0;
+  font-size: 1.75rem;
+  align-self: flex-start;
+}
+main section .container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
 @media screen and (min-width: 800px) {
-  main section {
-    flex-flow: row;
+  main section .container {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
   }
 }
 main .stats {
   display: flex;
   flex-flow: column nowrap;
 }
-main .stats-container {
+main .stats .title {
   display: flex;
-  flex-flow: column;
-  width: 100%;
-}
-@media screen and (min-width: 800px) {
-  main .stats-container {
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-}
-main .stats-title {
-  padding: 0.5em 0;
-  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: inline;
+  align-self: center;
+  font-size: 1.65rem;
+  white-space: nowrap;
 }
 main .stats-block {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  font-size: 1.75em;
-  margin: 0 1em;
+  font-size: 1.7em;
+  white-space: nowrap;
+}
+@media screen and (min-width: 800px) {
+  main .stats-block {
+    margin: 0 1em;
+  }
 }
 main .stats-block .icon-container {
   margin: 0;
@@ -287,14 +299,64 @@ main .stats .presentation-text {
   text-indent: 2em;
   text-align: justify;
   line-height: 1.25em;
+  padding: 1em 0;
   color: #5F5F5F;
 }
 main .image-separator img {
   position: relative;
   left: -1em;
-  box-sizing: content-box;
   width: 100vw;
+  margin: 1em 0;
+  box-sizing: content-box;
   filter: brightness(0.8);
+}
+@media screen and (min-width: 800px) {
+  main .image-separator img {
+    display: none;
+  }
+}
+main .activities {
+  padding: 0.5em;
+}
+main .activities .diagram {
+  padding: 0.5em;
+}
+main .activities .bullet-point {
+  margin: 1em 0;
+}
+main .activities .bullet-point ul {
+  padding: 0;
+  margin: 0.5em;
+  margin-left: 1.5em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+main .activities .bullet-point li {
+  padding: 0.5em;
+  line-height: 1.25em;
+  text-align: justify;
+}
+@media screen and (min-width: 800px) {
+  main .activities .bullet-point li {
+    padding: 0.65em;
+  }
+}
+main .activities .accent {
+  color: #42B23B;
+}
+main .activities .yt-video {
+  width: 100%;
+  aspect-ratio: 606/360;
+  margin: 1em 0;
+  border-radius: 1em;
+}
+@media screen and (min-width: 800px) {
+  main .activities .yt-video {
+    height: 350px;
+    width: auto;
+    border-radius: 0.5em;
+  }
 }
 
 footer {

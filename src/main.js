@@ -16,3 +16,19 @@ let openMenu = () => {
 
 ['click', 'touchstart'].forEach(event => openButton.addEventListener(event, e => openMenu()));
 ['click', 'touchstart'].forEach(event => closeButton.addEventListener(event, e => closeMenu()))
+
+function deferIframeLoad() {
+    const iframes = document.getElementsByTagName('iframe')
+    Array.from(iframes).forEach(iframe => {
+        const dataSrc = iframe.getAttribute('data-src')
+        if (dataSrc) {
+            iframe.setAttribute('src', dataSrc)
+        } else {
+            console.error('Unable to load iframe url')
+        }
+    })
+}
+
+window.onload = () => {
+    deferIframeLoad()
+}
