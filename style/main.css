@@ -27,6 +27,17 @@ h5 {
   margin: 0;
 }
 
+p {
+  text-align: justify;
+}
+
+hr {
+  margin: 1em;
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+
 .icon-container {
   display: flex;
   justify-content: center;
@@ -95,7 +106,8 @@ header .logo-container .logo {
     display: none;
   }
 }
-header .menu {
+
+.menu {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -112,7 +124,7 @@ header .menu {
   transition: right 250ms ease;
 }
 @media screen and (min-width: 800px) {
-  header .menu {
+  .menu {
     position: inherit;
     flex-flow: row nowrap;
     width: auto;
@@ -123,13 +135,13 @@ header .menu {
     box-shadow: none;
   }
 }
-header .menu.open {
+.menu.open {
   right: 0;
 }
-header .menu.close {
+.menu.close {
   right: -77vw;
 }
-header .menu-item {
+.menu-item {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -139,48 +151,49 @@ header .menu-item {
   border-radius: 5px;
   list-style: none;
   cursor: pointer;
+  user-select: none;
   transition: all 250ms ease;
 }
 @media screen and (min-width: 800px) {
-  header .menu-item {
+  .menu-item {
     padding: 0.5em 1em;
     height: 100%;
   }
 }
-header .menu-item:hover {
+.menu-item:hover {
   background-color: #ddd;
 }
-header .menu-item-content {
+.menu-item-content {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   max-width: 75%;
 }
-header .menu-item-content > * {
+.menu-item-content > * {
   margin: 0 0.5em;
 }
 @media screen and (min-width: 800px) {
-  header .menu-item-content {
+  .menu-item-content {
     max-width: 100%;
   }
 }
-header .menu-item img {
+.menu-item img {
   height: 2rem;
 }
 @media screen and (min-width: 800px) {
-  header .menu-item img {
+  .menu-item img {
     margin: 0;
   }
 }
-header .menu-item-label {
+.menu-item-label {
   font-size: 2em;
 }
 @media screen and (min-width: 800px) {
-  header .menu-item-label {
+  .menu-item-label {
     font-size: 1em;
   }
 }
-header .menu hr {
+.menu hr {
   height: 0.5px;
   width: 75%;
   margin: 0 0 2em 0;
@@ -189,11 +202,11 @@ header .menu hr {
   border-bottom: 0.25px solid #bababa;
 }
 @media screen and (min-width: 800px) {
-  header .menu hr {
+  .menu hr {
     display: none;
   }
 }
-header .menu .contact-button {
+.menu .contact-button {
   justify-self: flex-end;
   width: 80%;
   padding: 1em;
@@ -206,27 +219,30 @@ header .menu .contact-button {
   transition: all 250ms ease;
 }
 @media screen and (min-width: 800px) {
-  header .menu .contact-button {
+  .menu .contact-button {
     display: none;
   }
 }
-header .menu .contact-button:hover {
+.menu .contact-button:hover {
   background-color: #ddd;
 }
-header .menu .blank {
+.menu .blank {
   height: 3em;
 }
-header .menu .close-icon {
+.menu .close-icon {
   align-self: end;
   margin: 1em;
 }
 @media screen and (min-width: 800px) {
-  header .menu .close-icon {
+  .menu .close-icon {
     display: none;
   }
 }
 
 main {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
   flex-grow: 1;
   padding: 1em;
 }
@@ -234,6 +250,25 @@ main section {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
+}
+@media screen and (min-width: 800px) {
+  main section {
+    width: 90%;
+  }
+}
+main section .icon-container {
+  margin: 0;
+}
+main section .title-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+main section .title-bar .icon {
+  height: 4.5em;
+}
+main section .title-bar .title {
+  align-self: center;
 }
 main section .title {
   padding: 0.5em 0;
@@ -250,6 +285,31 @@ main section .container {
     flex-flow: row wrap;
     justify-content: space-evenly;
     width: 100%;
+  }
+}
+main section .bullet-point {
+  margin: 0.5em 0;
+  line-height: 1.35em;
+}
+main section .bullet-point p {
+  margin: 0 0.5em 0.25em;
+  text-align: justify;
+}
+main section .bullet-point ul {
+  padding: 0;
+  margin: 0.75em;
+  margin-left: 1.5em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+main section .bullet-point li {
+  padding: 0.25em;
+  text-align: left;
+}
+@media screen and (min-width: 800px) {
+  main section .bullet-point li {
+    padding: 0.65em;
   }
 }
 main .stats {
@@ -321,29 +381,12 @@ main .activities {
 main .activities .diagram {
   padding: 0.5em;
 }
-main .activities .bullet-point {
-  margin: 1em 0;
-}
-main .activities .bullet-point ul {
-  padding: 0;
-  margin: 0.5em;
-  margin-left: 1.5em;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+main .activities .accent {
+  color: #42B23B;
 }
 main .activities .bullet-point li {
   padding: 0.5em;
-  line-height: 1.25em;
   text-align: justify;
-}
-@media screen and (min-width: 800px) {
-  main .activities .bullet-point li {
-    padding: 0.65em;
-  }
-}
-main .activities .accent {
-  color: #42B23B;
 }
 main .activities .yt-video {
   width: 100%;
@@ -357,6 +400,43 @@ main .activities .yt-video {
     width: auto;
     border-radius: 0.5em;
   }
+}
+@media screen and (min-width: 800px) {
+  main .why li {
+    padding: 0.25em !important;
+  }
+}
+main .geo .title {
+  padding: 0.5em 0;
+}
+main .geo .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .geo .map {
+  width: 90vw;
+  height: auto;
+}
+main .history .block {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+main .history .block .icon {
+  height: 4em;
+}
+main .history .block-content {
+  display: flex;
+  flex-flow: column;
+}
+main .history .separator {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #8C8C8C;
 }
 
 footer {

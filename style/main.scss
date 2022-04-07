@@ -28,6 +28,17 @@ h5 {
     margin: 0;
 }
 
+p {
+    text-align: justify;
+}
+
+hr {
+    margin: 1em;
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #bfbfbf;
+}
+
 .icon-container {
     display: flex;
     justify-content: center;
@@ -100,155 +111,182 @@ header {
             display: none;
         }
     }
-
-    .menu {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        height: 100vh;
-        width: 75vw;
-        min-width: 200px;
-        max-width: 400px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0.5em;
-        background-color: #fff;
-        box-shadow: 0px 4px 4px 2px rgba(112, 112, 112, 0.4);
-        transition: right 250ms ease;
-
-        @include desktop {
-            position: inherit;
-            flex-flow: row nowrap;
-            width: auto;
-            height: 100%;
-            min-width: none;
-            max-width: none;
-            background-color: transparent;
-            box-shadow: none;
-        }
-
-        &.open {
-            right: 0;
-        }
-
-        &.close {
-            right: -77vw;
-        }
-
-        &-item {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: .5em 0;
-            border-radius: 5px;
-            list-style: none;
-            cursor: pointer;
-            transition: all 250ms ease;
-
-            @include desktop {
-                padding: .5em 1em;
-                height: 100%;
-            }
-
-            &:hover {
-                background-color: #ddd;
-            }
-
-            &-content {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                max-width: 75%;
-
-                &>* {
-                    margin: 0 .5em;
-                }
-
-                @include desktop {
-                    max-width: 100%;
-                }
-            }
-
-            img {
-                height: 2rem;
-
-                @include desktop {
-                    margin: 0;
-                }
-            }
-
-            &-label {
-                font-size: 2em;
-
-                @include desktop {
-                    font-size: 1em;
-                }
-            }
-        }
-
-        hr {
-            height: .5px;
-            width: 75%;
-            margin: 0 0 2em 0;
-            padding: 0;
-            border: 0;
-            border-bottom: 0.25px solid #bababa;
-
-            @include desktop {
-                display: none;
-            }
-        }
-
-        .contact-button {
-            justify-self: flex-end;
-            width: 80%;
-            padding: 1em;
-            margin: 1em;
-            text-align: center;
-            text-decoration: none;
-            color: rgba(10, 10, 10, .9);
-            border-radius: 10px;
-            border: 1px solid black;
-            transition: all 250ms ease;
-
-            @include desktop {
-                display: none;
-            }
-
-            &:hover {
-                background-color: #ddd;
-            }
-        }
-
-        .blank {
-            height: 3em;
-        }
-
-
-        .close-icon {
-            align-self: end;
-            margin: 1em;
-
-            @include desktop {
-                display: none;
-            }
-        }
-
-    }
 }
 
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+    width: 75vw;
+    min-width: 200px;
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 2px rgba(112, 112, 112, 0.4);
+    transition: right 250ms ease;
+
+    @include desktop {
+        position: inherit;
+        flex-flow: row nowrap;
+        width: auto;
+        height: 100%;
+        min-width: none;
+        max-width: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &.open {
+        right: 0;
+    }
+
+    &.close {
+        right: -77vw;
+    }
+
+    &-item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: .5em 0;
+        border-radius: 5px;
+        list-style: none;
+        cursor: pointer;
+        user-select: none;
+        transition: all 250ms ease;
+
+        @include desktop {
+            padding: .5em 1em;
+            height: 100%;
+        }
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            max-width: 75%;
+
+            &>* {
+                margin: 0 .5em;
+            }
+
+            @include desktop {
+                max-width: 100%;
+            }
+        }
+
+        img {
+            height: 2rem;
+
+            @include desktop {
+                margin: 0;
+            }
+        }
+
+        &-label {
+            font-size: 2em;
+
+            @include desktop {
+                font-size: 1em;
+            }
+        }
+    }
+
+    hr {
+        height: .5px;
+        width: 75%;
+        margin: 0 0 2em 0;
+        padding: 0;
+        border: 0;
+        border-bottom: 0.25px solid #bababa;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .contact-button {
+        justify-self: flex-end;
+        width: 80%;
+        padding: 1em;
+        margin: 1em;
+        text-align: center;
+        text-decoration: none;
+        color: rgba(10, 10, 10, .9);
+        border-radius: 10px;
+        border: 1px solid black;
+        transition: all 250ms ease;
+
+        @include desktop {
+            display: none;
+        }
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+
+    .blank {
+        height: 3em;
+    }
+
+
+    .close-icon {
+        align-self: end;
+        margin: 1em;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+}
 
 main {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
     flex-grow: 1;
     padding: 1em;
+
 
     section {
         display: flex;
         flex-flow: column wrap;
         width: 100%;
+
+        @include desktop {
+            width: 90%;
+        }
+
+        .icon-container {
+            margin: 0;
+        }
+
+        .title-bar {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+
+            .icon {
+                height: 4.5em;
+            }
+
+            .title {
+                align-self: center;
+            }
+        }
 
         .title {
             padding: .5em 0;
@@ -265,6 +303,34 @@ main {
                 flex-flow: row wrap;
                 justify-content: space-evenly;
                 width: 100%;
+            }
+        }
+
+        .bullet-point {
+            margin: .5em 0;
+            line-height: 1.35em;
+
+            p {
+                margin: 0 .5em .25em;
+                text-align: justify;
+            }
+
+            ul {
+                padding: 0;
+                margin: .75em;
+                margin-left: 1.5em;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+            }
+
+            li {
+                padding: 0.25em;
+                text-align: left;
+
+                @include desktop {
+                    padding: 0.65em;
+                }
             }
         }
     }
@@ -343,31 +409,13 @@ main {
             padding: 0.5em;
         }
 
-        .bullet-point {
-            margin: 1em 0;
-
-            ul {
-                padding: 0;
-                margin: .5em;
-                margin-left: 1.5em;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-            }
-
-            li {
-                padding: 0.5em;
-                line-height: 1.25em;
-                text-align: justify;
-
-                @include desktop {
-                    padding: 0.65em;
-                }
-            }
-        }
-
         .accent {
             color: #42B23B;
+        }
+
+        .bullet-point li {
+            padding: 0.5em;
+            text-align: justify;
         }
 
         .yt-video {
@@ -381,6 +429,59 @@ main {
                 width: auto;
                 border-radius: .5em;
             }
+        }
+    }
+
+    .why {
+        li {
+            @include desktop {
+                padding: 0.25em !important;
+            }
+        }
+    }
+
+    .geo {
+        .title {
+            padding: .5em 0;
+        }
+
+        .container {
+            @include center;
+        }
+
+        .map {
+            width: 90vw;
+            height: auto;
+            // aspect-ratio: 424/507;
+        }
+    }
+
+    .where {}
+
+    .history {
+        .block {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                height: 4em;
+            }
+
+            &-content {
+                display: flex;
+                flex-flow: column;
+            }
+
+        }
+
+        .separator {
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #8C8C8C;
         }
     }
 
