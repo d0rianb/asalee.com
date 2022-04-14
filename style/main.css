@@ -69,16 +69,30 @@ hr {
 }
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
   max-height: 6em;
   box-shadow: 0px -2px 4px 2px rgba(112, 112, 112, 0.4);
+  background-color: #F3F3F3;
+  z-index: 2;
+  transition: top ease 200ms;
 }
 @media screen and (min-width: 800px) {
   header {
+    position: absolute;
     height: 5em;
+  }
+}
+header.hide {
+  top: -7em;
+}
+@media screen and (min-width: 800px) {
+  header.hide {
+    top: 0;
   }
 }
 header .logo-container {
@@ -128,7 +142,7 @@ header .logo-container .logo {
     position: inherit;
     flex-flow: row nowrap;
     width: auto;
-    height: 100%;
+    height: 5em;
     min-width: none;
     max-width: none;
     background-color: transparent;
@@ -140,6 +154,11 @@ header .logo-container .logo {
 }
 .menu.close {
   right: -77vw;
+}
+@media screen and (min-width: 800px) {
+  .menu.close {
+    right: 0;
+  }
 }
 .menu-item {
   display: flex;
@@ -244,7 +263,13 @@ main {
   align-items: center;
   flex-flow: column;
   flex-grow: 1;
+  margin-top: 6em;
   padding: 1em;
+}
+@media screen and (min-width: 800px) {
+  main {
+    margin-top: 5em;
+  }
 }
 main section {
   display: flex;

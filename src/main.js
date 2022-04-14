@@ -17,6 +17,20 @@ let openMenu = () => {
 ['click', 'touchstart'].forEach(event => openButton.addEventListener(event, e => openMenu()));
 ['click', 'touchstart'].forEach(event => closeButton.addEventListener(event, e => closeMenu()))
 
+// Sticky header
+const header = document.querySelector('header')
+let lastScrollTop = 0
+
+document.addEventListener('scroll', () => {
+    let st = window.pageYOffset || document.documentElement.scrollTop
+    if (st > lastScrollTop) {
+        header.classList.add('hide')
+    } else {
+        header.classList.remove('hide')
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+})
+
 function deferIframeLoad() {
     const iframes = document.getElementsByTagName('iframe')
     Array.from(iframes).forEach(iframe => {
