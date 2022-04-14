@@ -279,8 +279,7 @@ main {
     padding: 1em;
 
     @include desktop {
-        margin-top: 5em;
-        margin: 0 2em;
+        margin: 5em 2em 0;
     }
 
 
@@ -584,12 +583,12 @@ main {
         width: 80vw;
         max-width: 500px;
         margin: 1em auto;
+        padding: .7em;
         border-radius: .75em;
         border: 2px solid #42B23B;
         font-size: 1.5em;
         color: #42B23B;
         text-decoration: none;
-        padding: .7em;
         text-align: center;
 
         &:hover {

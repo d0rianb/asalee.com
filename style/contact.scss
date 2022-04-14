@@ -1,0 +1,50 @@
+@import 'mixins.scss';
+
+h2,
+p {
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    margin: 1em;
+    width: 90vw;
+    max-width: 500px;
+
+    input,
+    select,
+    textarea {
+        padding: 1em;
+        border: 0;
+        border-radius: 3px;
+        margin: .5em 0 1em;
+
+        &:active,
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 4px 0 rgb(112 112 112 / 40%);
+        }
+    }
+
+
+    textarea {
+        resize: vertical;
+        min-height: 4em;
+
+    }
+
+    ::placeholder {
+        font-family: 'Inter', 'Roboto';
+        color: #B8BCCA;
+    }
+
+    label {
+        padding: .5em .1em 0;
+        color: #6F7482;
+    }
+
+    input[type=submit] {
+        padding: 0.35em;
+    }
+}

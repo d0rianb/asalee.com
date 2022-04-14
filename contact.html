@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asalée</title>
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="src/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo-container">
+            <img src="resources/img/logo-asalee.png" alt="Logo Asalée" class="logo">
+        </a>
+        <div class="hamburger-icon icon-container">
+            <img src="resources/icons/hamburger.png" alt="Menu" class="menu-icon icon">
+        </div>
+        <nav class="menu close">
+            <div class="close-icon icon-container center"><img src="resources/icons/close.png" alt="close" class="icon"></div>
+            <div class="blank"></div>
+            <li class="menu-item" data-scroll="body">
+                <div class="menu-item-content">
+                    <img src="resources/icons/home.png" alt="Accueil" class="menu-item-icon icon"></i>
+                    <span class="menu-item-label">Accueil</span>
+                </div>
+            </li>
+            <hr>
+            <li class="menu-item" data-scroll=".activities">
+                <div class="menu-item-content">
+
+                    <img src="resources/icons/hospital.png" alt="Activités" class="menu-item-icon icon"></i>
+                    <span class="menu-item-label">Activités</span>
+                </div>
+            </li>
+            <hr>
+            <li class="menu-item" data-scroll=".geo">
+                <div class="menu-item-content">
+                    <img src="resources/icons/location.png" alt="Localisation" class="menu-item-icon icon"></i>
+                    <span class="menu-item-label">Localisation</span>
+                </div>
+            </li>
+            <hr>
+            <li class="menu-item" data-scroll=".history">
+                <div class="menu-item-content">
+                    <img src="resources/icons/history.png" alt="Histoire" class="menu-item-icon icon"></i>
+                    <span class="menu-item-label">Histoire</span>
+                </div>
+            </li>
+            <hr>
+            <a class="contact-button" href="./contact.html">
+                <span>Nous contacter</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h2>Demande de contact</h2>
+        <p>Vous souhaitez avoir plus d'informations sur <span class="asalee">Asalee</span> :</p>
+
+        <form action="">
+            <label for="mail">Adresse e-mail</label>
+            <input type="email" name="mail" id="mail" placeholder="E-mail" autocomplete="email" required>
+
+            <label for="department">Département</label>
+            <select type="text" name="department" id="department" required>
+                <option disabled selected value style="color: #B8BCCA;"> -- Départements -- </option>
+                <option value="01">01 - Ain</option>
+                <option value="13">13 - Marseille</option>
+                <option value="75">75 - Paris</option>
+            </select>
+
+            <label for="object">Objet</label>
+            <input type="text" name="object" id="object" placeholder="Objet">
+
+            <label for="text">Texte</label>
+            <textarea name="text" id="text" placeholder="Texte"></textarea>
+
+            <label for="sign">Signature</label>
+            <textarea name="sign" id="sign" placeholder="Nom, prénom, adresse, fonction ...."></textarea>
+
+            <input type="submit" class="contact-us">
+
+        </form>
+    </main>
+    <footer>
+        <img src="./resources/icons/Visuel Asalee.png" alt="footer">
+        <p>2022 © <a href="/" class="legals">Mentions Légales</a></p>
+    </footer>
+</body>
+
+</html>
