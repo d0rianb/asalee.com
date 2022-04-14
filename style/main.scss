@@ -33,7 +33,7 @@ p {
 }
 
 hr {
-    margin: 1em;
+    margin: 1.5em;
     width: 90%;
     border: 0;
     border-bottom: 1px solid #bfbfbf;
@@ -280,6 +280,7 @@ main {
 
     @include desktop {
         margin-top: 5em;
+        margin: 0 2em;
     }
 
 
@@ -313,7 +314,7 @@ main {
 
         .title {
             padding: .5em 0;
-            font-size: 1.75rem;
+            font-size: 2rem;
             align-self: flex-start;
         }
 
@@ -474,6 +475,7 @@ main {
 
         .map {
             width: 90vw;
+            max-width: 700px;
             height: auto;
             // aspect-ratio: 424/507;
         }
@@ -482,22 +484,24 @@ main {
     .where {}
 
     .history {
-        .block {
-            display: flex;
-            flex-flow: row;
-            align-items: center;
-            justify-content: center;
-
-            .icon {
-                height: 4em;
-            }
-
-            &-content {
-                display: flex;
-                flex-flow: column;
-            }
-
+        .icon {
+            height: 4em;
         }
+
+        .block-content {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+
+            .date {
+                font-size: 1.5em;
+            }
+
+            .description {
+                color: #5F5F5F;
+            }
+        }
+
 
         .separator {
             writing-mode: vertical-lr;
@@ -505,9 +509,93 @@ main {
             text-align: center;
             letter-spacing: 0.02em;
             color: #8C8C8C;
+            transform: translateX(4px);
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            &>div {
+                @include center;
+            }
         }
     }
 
+    .articles {
+        @include center;
+
+        .article {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-evenly;
+            width: 90vw;
+            max-width: 700px;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background 250ms ease;
+            padding: .5em .25em;
+
+            &:hover {
+                background-color: #eeeeee;
+            }
+
+            &-block {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+            }
+
+            &-content {
+                padding: 1em;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            &-title {
+                display: flex;
+                font-size: 1.75em;
+                align-self: flex-start;
+            }
+
+        }
+
+        .icon {
+            height: 5em;
+        }
+
+        a {
+            align-self: flex-end;
+            padding: 0.25em;
+            border-radius: 5px;
+            color: #42B23B;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .contact-us {
+        width: 80vw;
+        max-width: 500px;
+        margin: 1em auto;
+        border-radius: .75em;
+        border: 2px solid #42B23B;
+        font-size: 1.5em;
+        color: #42B23B;
+        text-decoration: none;
+        padding: .7em;
+        text-align: center;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
 }
 
 footer {
