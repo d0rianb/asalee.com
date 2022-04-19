@@ -21,14 +21,14 @@
         <nav class="menu close">
             <div class="close-icon icon-container center"><img src="resources/icons/close.png" alt="close" class="icon"></div>
             <div class="blank"></div>
-            <li class="menu-item" data-scroll="body">
+            <li class="menu-item" data-scroll="main">
                 <div class="menu-item-content">
                     <img src="resources/icons/home.png" alt="Accueil" class="menu-item-icon icon"></i>
                     <span class="menu-item-label">Accueil</span>
                 </div>
             </li>
             <hr>
-            <li class="menu-item" data-scroll=".activities">
+            <li class="menu-item" data-scroll="activities">
                 <div class="menu-item-content">
 
                     <img src="resources/icons/hospital.png" alt="Activités" class="menu-item-icon icon"></i>
@@ -36,14 +36,14 @@
                 </div>
             </li>
             <hr>
-            <li class="menu-item" data-scroll=".geo">
+            <li class="menu-item" data-scroll="geo">
                 <div class="menu-item-content">
                     <img src="resources/icons/location.png" alt="Localisation" class="menu-item-icon icon"></i>
                     <span class="menu-item-label">Localisation</span>
                 </div>
             </li>
             <hr>
-            <li class="menu-item" data-scroll=".history">
+            <li class="menu-item" data-scroll="history">
                 <div class="menu-item-content">
                     <img src="resources/icons/history.png" alt="Histoire" class="menu-item-icon icon"></i>
                     <span class="menu-item-label">Histoire</span>
@@ -55,8 +55,8 @@
             </a>
         </nav>
     </header>
-    <main>
-        <section class="stats center">
+    <main id="main">
+        <section class="stats center" id="stats">
             <h2 class="title center"><span class="asalee">Asalée</span>, vous connaissez ?</h2>
             <div class="container">
                 <div class="stats-block left">
@@ -84,7 +84,7 @@
         <div class="image-separator">
             <img src="./resources/img/hospital-flat.png" alt="hospital">
         </div>
-        <section class="activities center">
+        <section class="activities center" id="activities">
             <h2 class="title">Les activités d'<span class="asalee">Asalée</span></h2>
             <div class="container">
                 <img src="https://via.placeholder.com/200x200" alt="diagram" class="diagram center">
@@ -101,7 +101,7 @@
                 <iframe class="yt-video" src="" data-src="https://www.youtube.com/embed/NUy_2zEZKHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
-        <section class="why">
+        <section class="why" id="why">
             <div class="title-bar">
                 <div class="icon-container">
                     <img src="./resources/icons/problem.png" alt="icon" class="icon">
@@ -128,14 +128,14 @@
             </div>
         </section>
         <hr>
-        <section class="geo">
+        <section class="geo" id="geo">
             <h2 class="title center">Situation géographique</h2>
             <div class="container">
                 <img class="map" src="./resources/img/map-asalee.png" alt="map">
             </div>
         </section>
         <hr>
-        <section class="where">
+        <section class="where" id="where">
             <div class="title-bar">
                 <div class="icon-container">
                     <img src="./resources/icons/location.png" alt="icon" class="icon">
@@ -147,7 +147,7 @@
             </div>
         </section>
         <hr>
-        <section class="history">
+        <section class="history" id="history">
             <div class="title">Un peu d'histoire</div>
             <div class="history-grid">
                 <div class="icon-container">
@@ -211,7 +211,7 @@
                 </div>
         </section>
         <hr>
-        <section class="articles">
+        <section class="articles" id="articles">
             <div class="article">
                 <div class="icon-container">
                     <img src="./resources/icons/newspaper.png" alt="logo" class="icon">
@@ -227,7 +227,7 @@
                 </div>
                 <div class="article-content">
                     <h4 class="article-title">40 thèses dédiés</h4>
-                    <a href="/">En savoir plus &#10141;</a>
+                    <a href="https://www.asalee.fr/public/theses.html">En savoir plus &#10141;</a>
                 </div>
             </div>
         </section>
