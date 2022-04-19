@@ -413,8 +413,6 @@ main {
     }
 
     .image-separator img {
-        position: relative;
-        left: -1em;
         width: 100vw;
         margin: 1em 0;
         box-sizing: content-box;
@@ -429,7 +427,12 @@ main {
         padding: .5em;
 
         .diagram {
-            padding: 0.5em;
+            margin: 0.5em;
+            width: 14em;
+
+            @include desktop {
+                width: 20em;
+            }
         }
 
         .accent {

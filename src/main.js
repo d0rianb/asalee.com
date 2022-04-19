@@ -40,11 +40,11 @@ Array.from(buttons).forEach(button => {
     ['click', 'touchstart'].forEach(event => {
         button.addEventListener(event, e => {
             e.preventDefault()
+            closeMenu()
             if (window.location.pathname !== '/') {
                 window.location.href = `./#${targetName}`
                 return
             }
-            closeMenu()
             scrollToY(target.offsetTop, () => target.offsetTop ? header.classList.add('hide') : null) // To show the header
         })
     })
