@@ -1,0 +1,44 @@
+@import 'mixins.scss';
+
+main {
+    h2 {
+        align-self: flex-start;
+        text-indent: 2em;
+        margin: 1em 0 .5em;
+    }
+
+    u {
+        text-decoration: none !important;
+    }
+
+    ol {
+        padding-left: 1.75em;
+
+        &>li {
+            padding: 0.5em;
+        }
+    }
+
+    .block a {
+        text-decoration: none;
+        color: #1A78C2;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .v-label {
+        text-align: justify;
+    }
+
+    .block div:nth-child(2) {
+        font-size: .85em;
+        font-style: italic;
+        color: #555;
+    }
+
+    .cismef-bold {
+        display: none
+    }
+}

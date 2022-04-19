@@ -1,0 +1,35 @@
+/* Media queries */
+main h2 {
+  align-self: flex-start;
+  text-indent: 2em;
+  margin: 1em 0 0.5em;
+}
+main u {
+  text-decoration: none !important;
+}
+main ol {
+  padding-left: 1.75em;
+}
+main ol > li {
+  padding: 0.5em;
+}
+main .block a {
+  text-decoration: none;
+  color: #1A78C2;
+}
+main .block a:hover {
+  text-decoration: underline;
+}
+main .v-label {
+  text-align: justify;
+}
+main .block div:nth-child(2) {
+  font-size: 0.85em;
+  font-style: italic;
+  color: #555;
+}
+main .cismef-bold {
+  display: none;
+}
+
+/*# sourceMappingURL=thesis.css.map */
