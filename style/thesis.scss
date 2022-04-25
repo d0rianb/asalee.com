@@ -113,3 +113,11 @@ main {
         max-height: fit-content;
     }
 }
+
+.other-articles li {
+    padding: .5em 1em;
+
+    @include desktop {
+        padding: 0.5em;
+    }
+}
