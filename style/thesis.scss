@@ -1,5 +1,6 @@
 @import 'mixins.scss';
 
+// Old support
 main {
     h2 {
         align-self: flex-start;
@@ -19,12 +20,16 @@ main {
         }
     }
 
-    .block a {
-        text-decoration: none;
-        color: #1A78C2;
+    .block {
+        display: block;
 
-        &:hover {
-            text-decoration: underline;
+        a {
+            text-decoration: none;
+            color: #1A78C2;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -40,5 +45,73 @@ main {
 
     .cismef-bold {
         display: none
+    }
+}
+
+.thesis {
+    .title {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .arrow-container {
+            @include center;
+            padding: .75em;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: border 250ms ease;
+
+
+            &:hover {
+                border-color: #1A78C2;
+
+                .down-arrow {
+                    border-color: #1A78C2;
+                }
+            }
+
+        }
+
+        .down-arrow {
+            border: solid #555;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transition: 150ms ease border;
+
+
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #1A78C2;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .content,
+    .subtitle {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 250s ease-out;
+    }
+
+    .subtitle {
+        font-size: .85em;
+        font-style: italic;
+        color: #555;
+    }
+
+    .open>div {
+        max-height: fit-content;
     }
 }
