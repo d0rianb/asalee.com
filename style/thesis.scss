@@ -120,4 +120,8 @@ main {
     @include desktop {
         padding: 0.5em;
     }
+
+    strong {
+        font-weight: 400;
+    }
 }

@@ -108,5 +108,8 @@ main .cismef-bold {
     padding: 0.5em;
   }
 }
+.other-articles li strong {
+  font-weight: 400;
+}
 
 /*# sourceMappingURL=thesis.css.map */
