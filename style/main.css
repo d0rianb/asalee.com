@@ -7,11 +7,11 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: #F3F3F3;
-  font-family: "Inter", "Roboto";
+  font-family: "Inter", "Roboto", "Helvetica", "Arial";
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  background: #F3F3F3;
 }
 
 body {
@@ -261,14 +261,17 @@ header .logo-container .logo {
 main {
   display: flex;
   align-items: center;
+  align-self: center;
   flex-flow: column;
   flex-grow: 1;
   margin-top: 6em;
   padding: 1em;
+  background: #F5F5F5;
 }
 @media screen and (min-width: 800px) {
   main {
     margin: 5em 2em 0;
+    max-width: 1000px;
   }
 }
 main section {
@@ -310,6 +313,7 @@ main section .container {
     flex-flow: row wrap;
     justify-content: space-evenly;
     width: 100%;
+    margin: 2em 0em;
   }
 }
 main section .bullet-point {
@@ -407,7 +411,7 @@ main .activities .diagram {
 }
 @media screen and (min-width: 800px) {
   main .activities .diagram {
-    width: 20em;
+    width: 18em;
   }
 }
 main .activities .accent {
@@ -417,14 +421,22 @@ main .activities .bullet-point li {
   padding: 0.5em;
   text-align: justify;
 }
-main .activities .yt-video {
+main .activities .video-container {
+  width: 100%;
+}
+main .activities .video-container h2 {
+  margin-top: 1em;
+}
+main .activities .video-container .yt-video {
+  display: block;
+  justify-self: center;
   width: 100%;
   aspect-ratio: 606/360;
-  margin: 1em 0;
+  margin: 1em auto;
   border-radius: 1em;
 }
 @media screen and (min-width: 800px) {
-  main .activities .yt-video {
+  main .activities .video-container .yt-video {
     height: 350px;
     width: auto;
     border-radius: 0.5em;

@@ -15,5 +15,12 @@
 .actus a:hover h2 {
   text-decoration: underline;
 }
+.actus h2 {
+  font-size: 1.2em;
+}
+.actus p {
+  margin: 0.5em;
+  font-size: 0.9em;
+}
 
 /*# sourceMappingURL=actu.css.map */
