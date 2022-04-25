@@ -35,13 +35,15 @@ main .cismef-bold {
   display: none;
 }
 
-.thesis .title {
+.thesis .title,
+.other-articles .title {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
 }
-.thesis .title .arrow-container {
+.thesis .arrow-container,
+.other-articles .arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,13 +53,16 @@ main .cismef-bold {
   cursor: pointer;
   transition: border 250ms ease;
 }
-.thesis .title .arrow-container:hover {
+.thesis .arrow-container:hover,
+.other-articles .arrow-container:hover {
   border-color: #1A78C2;
 }
-.thesis .title .arrow-container:hover .down-arrow {
+.thesis .arrow-container:hover .down-arrow,
+.other-articles .arrow-container:hover .down-arrow {
   border-color: #1A78C2;
 }
-.thesis .title .down-arrow {
+.thesis .down-arrow,
+.other-articles .down-arrow {
   border: solid #555;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -66,26 +71,32 @@ main .cismef-bold {
   -webkit-transform: rotate(45deg);
   transition: 150ms ease border;
 }
-.thesis a {
+.thesis a,
+.other-articles a {
   text-decoration: none;
   color: #1A78C2;
   cursor: pointer;
 }
-.thesis a:hover {
+.thesis a:hover,
+.other-articles a:hover {
   text-decoration: underline;
 }
 .thesis .content,
-.thesis .subtitle {
+.thesis .subtitle,
+.other-articles .content,
+.other-articles .subtitle {
   max-height: 0;
   overflow: hidden;
   transition: max-height 250s ease-out;
 }
-.thesis .subtitle {
+.thesis .subtitle,
+.other-articles .subtitle {
   font-size: 0.85em;
   font-style: italic;
   color: #555;
 }
-.thesis .open > div {
+.thesis .open > div,
+.other-articles .open > div {
   max-height: fit-content;
 }
 

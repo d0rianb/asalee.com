@@ -48,44 +48,42 @@ main {
     }
 }
 
-.thesis {
+.thesis,
+.other-articles {
     .title {
         display: flex;
         flex-flow: row;
         justify-content: space-between;
         align-items: center;
+    }
 
-        .arrow-container {
-            @include center;
-            padding: .75em;
-            border-radius: 50%;
-            border: 1px solid transparent;
-            cursor: pointer;
-            transition: border 250ms ease;
+    .arrow-container {
+        @include center;
+        padding: .75em;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: border 250ms ease;
 
 
-            &:hover {
+        &:hover {
+            border-color: #1A78C2;
+
+            .down-arrow {
                 border-color: #1A78C2;
-
-                .down-arrow {
-                    border-color: #1A78C2;
-                }
             }
-
         }
 
-        .down-arrow {
-            border: solid #555;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            transition: 150ms ease border;
+    }
 
-
-        }
-
+    .down-arrow {
+        border: solid #555;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition: 150ms ease border;
     }
 
     a {
