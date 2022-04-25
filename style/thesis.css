@@ -3,9 +3,6 @@
   box-sizing: border-box;
 }
 
-main {
-  padding: 0 1em;
-}
 main h2 {
   align-self: flex-start;
   text-indent: 2em;
@@ -107,16 +104,19 @@ main .cismef-bold {
   max-height: fit-content;
 }
 
-.other-articles li {
+ol.other-articles {
+  width: auto;
+}
+ol.other-articles li {
   padding: 0.5em 1em;
   width: auto;
 }
 @media screen and (min-width: 800px) {
-  .other-articles li {
+  ol.other-articles li {
     padding: 0.5em;
   }
 }
-.other-articles li strong {
+ol.other-articles li strong {
   font-weight: 400;
 }
 

@@ -6,8 +6,6 @@
 
 // Old support
 main {
-    padding: 0 1em;
-
     h2 {
         align-self: flex-start;
         text-indent: 2em;
@@ -120,7 +118,8 @@ main {
     }
 }
 
-.other-articles {
+ol.other-articles {
+    width: auto;
 
     li {
         padding: .5em 1em;
