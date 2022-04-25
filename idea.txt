@@ -1,2 +1,5 @@
 thèses autres articles largeur
 lien formulaire
+
+change patient logo
+embeded font
