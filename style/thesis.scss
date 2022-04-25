@@ -1,7 +1,13 @@
 @import 'mixins.scss';
 
+* {
+    box-sizing: border-box;
+}
+
 // Old support
 main {
+    padding: 0 1em;
+
     h2 {
         align-self: flex-start;
         text-indent: 2em;
@@ -114,14 +120,18 @@ main {
     }
 }
 
-.other-articles li {
-    padding: .5em 1em;
+.other-articles {
 
-    @include desktop {
-        padding: 0.5em;
-    }
+    li {
+        padding: .5em 1em;
+        width: auto;
 
-    strong {
-        font-weight: 400;
+        @include desktop {
+            padding: 0.5em;
+        }
+
+        strong {
+            font-weight: 400;
+        }
     }
 }

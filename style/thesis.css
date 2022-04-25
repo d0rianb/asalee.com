@@ -1,4 +1,11 @@
 /* Media queries */
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0 1em;
+}
 main h2 {
   align-self: flex-start;
   text-indent: 2em;
@@ -102,6 +109,7 @@ main .cismef-bold {
 
 .other-articles li {
   padding: 0.5em 1em;
+  width: auto;
 }
 @media screen and (min-width: 800px) {
   .other-articles li {
