@@ -459,6 +459,7 @@ main .geo .map {
   width: 90vw;
   max-width: 700px;
   height: auto;
+  mix-blend-mode: darken;
 }
 main .history .icon {
   height: 4em;

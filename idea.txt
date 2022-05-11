@@ -1,11 +1,1 @@
-thèses autres articles largeur
-lien formulaire
-
-embeded font
-smaller actualités
-
-desktop vertical space
-
-image de fond desktop / réduire la largeur
-
-desktop diminuer taille diagramme
+each section background
