@@ -95,6 +95,7 @@ header .logo-container {
   display: flex;
   height: 100%;
   border-radius: 0.5em;
+  padding: 0.35em;
   transition: all 250ms ease;
 }
 header .logo-container:hover {
@@ -385,7 +386,7 @@ main .stats .presentation-text {
   text-indent: 2em;
   text-align: justify;
   line-height: 1.25em;
-  padding: 1em 0.5em;
+  padding: 1em;
   color: #5F5F5F;
 }
 main .image-separator img {
@@ -458,6 +459,9 @@ main .geo .map {
   height: auto;
   mix-blend-mode: darken;
 }
+main .where .container p {
+  padding: 0 1em;
+}
 main .history .icon {
   height: 4em;
 }
@@ -514,12 +518,17 @@ main .articles .article-block {
   align-items: center;
 }
 main .articles .article-content {
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 800px) {
+  main .articles .article-content {
+    padding: 1em;
+  }
 }
 main .articles .article-title {
   display: flex;
