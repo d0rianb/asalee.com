@@ -54,7 +54,7 @@ hr {
     }
 
     &:hover {
-        background-color: #eeeeee;
+        // background-color: #eeeeee;
     }
 }
 
@@ -326,7 +326,7 @@ main {
             width: 100%;
 
             @include desktop {
-                flex-flow: row wrap;
+                flex-flow: column wrap;
                 justify-content: space-evenly;
                 width: 100%;
                 margin: 2em 0em;
@@ -345,7 +345,7 @@ main {
             ul {
                 padding: 0;
                 margin: .75em;
-                margin-left: 1.5em;
+                margin-left: 2em;
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
@@ -353,6 +353,7 @@ main {
 
             li {
                 padding: 0.25em;
+                padding-left: 0.5em;
                 text-align: left;
 
                 @include desktop {
@@ -411,7 +412,7 @@ main {
             text-indent: 2em;
             text-align: justify;
             line-height: 1.25em;
-            padding: 1em 0;
+            padding: 1em .5em;
             color: #5F5F5F;
         }
     }

@@ -51,10 +51,6 @@ hr {
   height: 2rem;
   aspect-ratio: 1/1;
 }
-.icon-container:hover {
-  background-color: #eeeeee;
-}
-
 .center {
   display: flex;
   justify-content: center;
@@ -310,7 +306,7 @@ main section .container {
 }
 @media screen and (min-width: 800px) {
   main section .container {
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     width: 100%;
     margin: 2em 0em;
@@ -327,13 +323,14 @@ main section .bullet-point p {
 main section .bullet-point ul {
   padding: 0;
   margin: 0.75em;
-  margin-left: 1.5em;
+  margin-left: 2em;
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 main section .bullet-point li {
   padding: 0.25em;
+  padding-left: 0.5em;
   text-align: left;
 }
 @media screen and (min-width: 800px) {
@@ -388,7 +385,7 @@ main .stats .presentation-text {
   text-indent: 2em;
   text-align: justify;
   line-height: 1.25em;
-  padding: 1em 0;
+  padding: 1em 0.5em;
   color: #5F5F5F;
 }
 main .image-separator img {
