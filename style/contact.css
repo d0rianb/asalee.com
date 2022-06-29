@@ -8,7 +8,7 @@ form {
   display: flex;
   flex-flow: column;
   margin: 1em;
-  width: 90vw;
+  width: 85vw;
   max-width: 500px;
 }
 form input,
@@ -32,6 +32,7 @@ form textarea:focus {
 form textarea {
   resize: vertical;
   min-height: 4em;
+  font-family: "Inter", "Roboto", "Helvetica", "Arial";
 }
 form ::placeholder {
   font-family: "Inter", "Roboto";

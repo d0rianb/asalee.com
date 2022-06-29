@@ -60,9 +60,9 @@
         <h2>Demande de contact</h2>
         <p>Vous souhaitez avoir plus d'informations sur <span class="asalee">Asalee</span> :</p>
 
-        <form action="./mailer.php" method="post">
-            <label for="mail">Adresse e-mail</label>
-            <input type="email" name="mail" id="mail" placeholder="E-mail" autocomplete="email" required>
+        <form onsubmit="sendMail(event)">
+            <!-- <label for="from">Adresse e-mail</label>
+            <input type="email" name="from" id="mail" placeholder="E-mail" autocomplete="email" required> -->
 
             <label for="department">Département</label>
             <select type="text" name="department" id="department" required>
@@ -170,19 +170,31 @@
                 <option value="976">976 - Mayotte</option>
             </select>
 
-            <label for="object">Objet</label>
-            <input type="text" name="object" id="object" placeholder="Objet">
+            <label for="subject">Objet</label>
+            <input type="text" name="subject" id="object" placeholder="Objet">
 
-            <label for="text">Texte</label>
-            <textarea name="text" id="text" placeholder="Texte"></textarea>
+            <label for="body">Texte</label>
+            <textarea name="body" id="text" placeholder="Texte"></textarea>
 
             <label for="sign">Signature</label>
-            <textarea name="sign" id="sign" placeholder="Nom, prénom, adresse, fonction ...."></textarea>
+            <textarea name="sign" id="sign" placeholder="Nom, prénom, adresse, fonction ..."></textarea>
 
-            <input type="submit" class="contact-us">
-
+            <input type="submit" class="contact-us" value="Envoyer">
         </form>
     </main>
+    <script language="javascript">
+        let sendMail = e => {
+            e.preventDefault()
+            e.stopPropagation()
+            const contactMail = 'contact@asalee.fr'
+            const department = document.querySelector('select[name="department"]').value
+            const subject = document.querySelector('input[name="subject"]').value || ''
+            const body = document.querySelector('textarea[name="body"]').value || ''
+            const sign = document.querySelector('textarea[name="sign"]').value || ''
+            window.location.href = `mailto:${contactMail}?subject=${subject}&body=${body}%0A${sign}`
+            return false
+        }
+    </script>
     <footer>
         <img src="./resources/icons/Visuel Asalee.png" alt="footer">
         <p>2022 © <a href="/" class="legals">Mentions Légales</a></p>
