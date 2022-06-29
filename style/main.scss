@@ -315,7 +315,7 @@ main {
         }
 
         .title {
-            padding: .5em 0;
+            padding: .5em;
             font-size: 2rem;
             align-self: flex-start;
         }
@@ -484,7 +484,7 @@ main {
 
     .geo {
         .title {
-            padding: .5em 0;
+            padding: .5em;
         }
 
         .container {
@@ -575,8 +575,12 @@ main {
 
             &-title {
                 display: flex;
-                font-size: 1.75em;
+                font-size: 1.5em;
                 align-self: flex-start;
+
+                @include desktop {
+                    font-size: 1.75em;
+                }
             }
 
         }
