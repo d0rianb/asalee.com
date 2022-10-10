@@ -109,7 +109,7 @@ header .logo-container .logo {
 }
 @media screen and (min-width: 800px) {
   header .logo-container .logo {
-    padding: 0.1em;
+    padding: 0.2em;
   }
 }
 @media screen and (min-width: 800px) {
@@ -263,7 +263,7 @@ main {
   flex-grow: 1;
   margin-top: 6em;
   padding: 1em;
-  background: #F5F5F5;
+  background: #F3F3F3;
 }
 @media screen and (min-width: 800px) {
   main {
@@ -444,6 +444,9 @@ main .activities .video-container .yt-video {
   main .why li {
     padding: 0.25em !important;
   }
+}
+main .why .bullet-point {
+  margin: 0 0.5em;
 }
 main .geo .title {
   padding: 0.5em;
